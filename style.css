@@ -1,0 +1,87 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+NKo+Unjoined:wght@400;500;600;700&family=Space+Grotesk&display=swap');
+*{
+    font-family: 'Noto Sans NKo Unjoined', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+#designation {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+#designation span {
+    color: #5A43CB;
+    position: relative;
+}
+#designation span::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: #5A43CB;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+#designation span.stop-blinking::before {
+    animation: none;
+}
+@keyframes blink {
+    50% { opacity: 0 }
+}
+#contactme{
+    font-family: 'Space Grotesk', sans-serif;
+}
+#vicks{
+    background-image: url(./assets/vicks.svg);
+}
+ #profilepic{
+     clip-path: polygon(15% 14%, 100% 0%, 80% 100%, 0% 100%);
+     
+ }
+
+.rotated {
+    
+    transform: rotate(180deg);
+    transition: all 700ms;
+}
+
+/* slider */
+
+.slide {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out; /* Add a smooth transition */
+}
+
+.darkmode{
+    background-color: #191627;
+    color: white;
+}
+
+
+
+
+
+
+/* slider */
+/* For webkit-based browsers */
+html::-webkit-scrollbar {
+  width: 2px; /* Adjust the width as needed */
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Change the background color */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #888; /* Change the thumb color */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change the thumb color on hover */
+}
+
