@@ -1,3 +1,30 @@
+var tl = gsap.timeline();
+function time() {
+    var a = 0;
+    var loaderValue = document.querySelector('#loader h1');
+    var interval = setInterval(() => {
+        a = a + Math.floor(Math.random() * 15);
+        if (a < 100) {
+            loaderValue.textContent = a + "%";
+        } else {
+            a = 100;
+            loaderValue.textContent = a + "%";
+            clearInterval(interval);
+            gsap.to("#loader", {
+                top: "-100vh",
+                delay: 0.5,
+                duration: 2
+            });
+        }
+    }, 150);
+}
+
+tl.to("#loader h1", {
+    delay: 0.5,
+    duration: 1,
+    onStart: time // Remove the parentheses so that the function is passed as a reference
+});
+
 const body= document.querySelector("#body");
 const librarieshead=document.querySelector('#librarieshead');
 const librariesbody=document.querySelector('#librariesbody');
