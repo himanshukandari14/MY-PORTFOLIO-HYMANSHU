@@ -102,3 +102,8 @@ background-image: linear-gradient(160deg, #0016e9 0%, #8082d0 100%);
      font-family: cursive;
      color: white;
 }
+#navlist li:hover{
+    scale: 1.03;
+    transition: all 1;
+    color: #453692;
+}
