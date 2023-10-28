@@ -16,7 +16,7 @@ function time() {
                 duration: 2
             });
         }
-    }, 150);
+    }, 65);
 }
 
 tl.to("#loader h1", {
@@ -40,6 +40,7 @@ const darmodebtn1=document.querySelector('#darmodebtn1');
 const darmodebtn2=document.querySelector('#darmodebtn2');
 const navbar2=document.querySelector('#navbar2')
 const Hymanshu=document.querySelector('#Hymanshu')
+const himanshupic=document.querySelector('#himanshupic')
 
 const lightmodebtn1=document.querySelector('#lightmodebtn1')
 const totalSlides = slides.length;
@@ -60,6 +61,9 @@ function previousSlide() {
     currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
     showSlide(currentSlideIndex);
 }
+
+
+
 
 // Automatically advance the slides every 2 seconds
 const slideInterval = setInterval(nextSlide, 2000);
@@ -221,3 +225,12 @@ lightmodebtn2.addEventListener('click', () => {
   console.log("dark mode Disabled");
   darkmodeCounter = 0;
 });
+
+// dev effects on hymanshu pic
+himanshupic.addEventListener('mouseover',()=>{
+    himanshupic.classList.add('devfx');
+    
+})
+himanshupic.addEventListener('mouseout',()=>{
+    himanshupic.classList.remove('devfx');
+})
